@@ -28,9 +28,12 @@ GEM
     arel (4.0.0)
     atomic (1.1.14)
     bcrypt-ruby (3.0.1)
+    bcrypt-ruby (3.0.1-x86-mingw32)
+    bindata (1.6.0)
     bootstrap-sass (2.3.2.0)
       sass (~> 3.2)
     builder (3.1.4)
+    chunky_png (1.2.8)
     coffee-rails (4.0.0)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0.beta, < 5.0)
@@ -40,6 +43,7 @@ GEM
     coffee-script-source (1.6.3)
     erubis (2.7.0)
     execjs (2.0.1)
+    hashie (2.0.5)
     hike (1.2.3)
     i18n (0.6.5)
     jbuilder (1.5.1)
@@ -55,7 +59,15 @@ GEM
     mime-types (1.25)
     minitest (4.7.5)
     multi_json (1.8.0)
+    oily_png (1.1.0)
+      chunky_png (~> 1.2.7)
     polyglot (0.3.3)
+    psd (1.2.0)
+      bindata
+      oily_png
+      psd-enginedata (~> 1.0)
+    psd-enginedata (1.0.0)
+      hashie (~> 2.0)
     rack (1.5.2)
     rack-test (0.6.2)
       rack (>= 1.0)
@@ -93,6 +105,7 @@ GEM
       activesupport (>= 3.0)
       sprockets (~> 2.8)
     sqlite3 (1.3.8)
+    sqlite3 (1.3.8-x86-mingw32)
     thor (0.18.1)
     thread_safe (0.1.3)
       atomic
@@ -109,6 +122,7 @@ GEM
 
 PLATFORMS
   ruby
+  x86-mingw32
 
 DEPENDENCIES
   bcrypt-ruby (~> 3.0.0)
@@ -116,6 +130,7 @@ DEPENDENCIES
   coffee-rails (~> 4.0.0)
   jbuilder (~> 1.2)
   jquery-rails
+  psd
   rails (= 4.0.0)
   sass-rails (~> 4.0.0)
   sdoc

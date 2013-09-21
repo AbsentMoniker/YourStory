@@ -1,3 +1,6 @@
+User.name="Jarvis"
+
+
 class User < ActiveRecord::Base
   #attr_accessor :password, :password_confirmation
   before_save {self.email = email.downcase}
@@ -7,4 +10,5 @@ class User < ActiveRecord::Base
 
   has_secure_password
   validates :password, length: {minimum: 6}
+  has_many :storys
 end
