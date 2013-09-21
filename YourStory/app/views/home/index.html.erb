@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <% provide(:title, 'Home') %>
 <div class="center hero-unit">
 <h1>Home Page</h1>
@@ -5,3 +6,15 @@
 
 <%= link_to "Sign up now!", signup_path, class: "btn btn-large btn-primary" %>
 </div>
+=======
+<% provide(:title, 'Home') %>
+<div class="center hero-unit">
+<h1>Home Page</h1>
+<% if signed_in? %>
+<p>You are signed in! Eventually, we will list the most recent stories of the people you follow </p>
+<% else %>
+<p>Welcome to YourStory, a portal where you can spin a tale for the world to see and change!</p>
+<%= link_to "Sign up now!", signup_path, class: "btn btn-large btn-primary" %>
+<% end %>
+</div>
+>>>>>>> 2810bff28fb93e1f2510d8694a755f970046d85c
