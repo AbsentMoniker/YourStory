@@ -1,4 +1,5 @@
 YourStory::Application.routes.draw do
+  get "users/new"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -53,4 +54,11 @@ YourStory::Application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+  get "home/index"
+  resources :users
+  #resources :sessions, only: [:new, :create, :destroy]
+  root 'home#index'
+  match '/signup', to: 'users#new', via: 'get'
+  #match '/signin', to: 'sessions#new', via: 'get' 
+  #match '/signout', to: 'sessions#destroy', via: 'delete'
 end
