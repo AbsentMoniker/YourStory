@@ -56,9 +56,9 @@ YourStory::Application.routes.draw do
   #   end
   get "home/index"
   resources :users
-  #resources :sessions, only: [:new, :create, :destroy]
+  resources :sessions, only: [:new, :create, :destroy]
   root 'home#index'
   match '/signup', to: 'users#new', via: 'get'
-  #match '/signin', to: 'sessions#new', via: 'get' 
-  #match '/signout', to: 'sessions#destroy', via: 'delete'
+  match '/signin', to: 'sessions#new', via: 'get' 
+  match '/signout', to: 'sessions#destroy', via: 'delete'
 end
