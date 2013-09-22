@@ -1,7 +1,7 @@
 YourStory::Application.routes.draw do
   
-  get "storys/new"
-  get "storys/create"
+  get "stories/new"
+  get "stories/create"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -59,6 +59,7 @@ YourStory::Application.routes.draw do
   get "users/new"
   get "home/index"
   resources :users
+  resources :stories
   resources :sessions, only: [:new, :create, :destroy]
   root 'home#index'
   match '/signup', to: 'users#new', via: 'get'
