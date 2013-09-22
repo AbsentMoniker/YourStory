@@ -1,2 +1,17 @@
-<h1>Storys#new</h1>
-<p>Find me in app/views/storys/new.html.erb</p>
+<% provide(:title, "Sign in") %>
+<h1>Create New Story</h1>
+
+<div class="row">
+  <div class="span6 offset3">
+    <%= form_for @story, url: {action: "create"} do |f| %>
+    
+    <%= f.label :Title %>
+    <%= f.text_field :title %>
+
+    <%= f.label :Story %>
+    <%= f.text_area :body %>
+
+    <%= f.submit "Submit Story", class: "btn btn-large btn-primary" %>
+    <% end %>
+  </div>
+</div>

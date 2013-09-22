@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-module SessionsHelper
-end
-=======
 module SessionsHelper
 
   def sign_in(user)
@@ -40,4 +36,3 @@ module SessionsHelper
     session[:return_to] = request.url if request.get?
   end
 end
->>>>>>> b6a913c3585797e76db1ba19adf7e62fcde14236

@@ -66,5 +66,5 @@ YourStory::Application.routes.draw do
   match '/signin', to: 'sessions#new', via: 'get' 
   match '/signout', to: 'sessions#destroy', via: 'delete'
   match '/:name', to: 'users#show', via: 'get'
-  match '/:name/newstory', to: 'stories#new', via: 'get'
+  match '/
 end
