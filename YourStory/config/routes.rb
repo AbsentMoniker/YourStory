@@ -1,7 +1,7 @@
 YourStory::Application.routes.draw do
   
-  get "stories/new"
-  get "stories/create"
+  #get "stories/new"
+  #get "stories/create"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -66,5 +66,5 @@ YourStory::Application.routes.draw do
   match '/signin', to: 'sessions#new', via: 'get' 
   match '/signout', to: 'sessions#destroy', via: 'delete'
   match '/:name', to: 'users#show', via: 'get'
-  match '/:name/newstory', to: 'stories#new', via: 'get'
+  match 'new_story_path', to: 'stories#new', via: 'get'
 end

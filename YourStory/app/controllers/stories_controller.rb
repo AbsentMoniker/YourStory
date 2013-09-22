@@ -4,7 +4,7 @@ class StoriesController < ApplicationController
   end
 
   def create
-    user = User.find_by(email: params[:session][:email].downcase)
+    user = User.find_by(name: :session[:name])
     if user && user.authenticate(params[:session][:password])
       @story = Story.new(user_params, author => user[:name],
                          beginning => true)
