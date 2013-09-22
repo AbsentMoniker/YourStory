@@ -1,3 +1,2 @@
-class Story<ActiveRecord::Base
-  belongs_to:user
+class Story < ActiveRecord::Base
 end
