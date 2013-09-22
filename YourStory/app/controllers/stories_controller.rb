@@ -4,14 +4,12 @@ class StoriesController < ApplicationController
   end
 
   def create
-    user = User.find_by(name: :session[:name])
-    if user && user.authenticate(params[:session][:password])
-      @story = Story.new(user_params, author => user[:name],
-                         beginning => true)
-      if @story.save
-        flash[:success] = "#{story[:title]} was saved!"
-        redirect_to @user
-      end
+    @story = Story.new(story_params)
+    @story.user_id = current_user.id
+    if @story.save
+      flash[:success] = "#{@story[:title]} was successfully saved!"
+      redirect_to root_url
+   
     else
       redirect_to root_url
     end
